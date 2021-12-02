@@ -1,0 +1,8 @@
+__pycache__/
+.vs/
+.ignore/
+*.json
+*.csv
+gitlab_config.py
+credentials.json
+token.json

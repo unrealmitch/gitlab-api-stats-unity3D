@@ -1,0 +1,46 @@
+# -*- coding: utf-8 -*-
+
+# GitLab API Configuration
+git_url = "https://yourserver.xoia.es"
+git_token = "yourtoken"
+
+# Range of Project IDs to be analyzed
+min_proj = 0
+max_proj = 9999
+
+# Project IDs that will be ommited
+ommitProjects = [ ]
+
+# Default Start
+default_start = "2021-01-01"
+## Use yesterday instead of Defalt Start
+default_start_yesterday = True
+## If use default_start_yesterday, don't get today commits, stop at yesterday 24:00:00
+default_stop_yesterday_midnight = True
+
+# Commits Configuration
+## If true, order of commit it's older to newer
+reverse_commits_older = True
+## Include basic stats of commits (general adds/del)
+include_stats = True
+## Include deeper stats of commits (changes/adds/del/lines add/lines del of different files/filters)
+include_more_stats = True
+## filteredadd field (same as adds per commit, but this set the max limit per commit)
+max_add_per_commit = 20000
+
+# Behaviour Configuration
+commitsPerPage = 1          # Number of commits per page    (1-100)
+maxErrors = 5               # Max number of errors per commit (before ommit)
+save_each_projects = 10     # Save CSVs each x projects
+save_each_commits = 200     # Save CSVs each x commits
+
+# Replace a author email for another (usually for users that use multiples emails)
+replaces = [
+    ("personal-email@gmail.com", "companyemail@company.es"),
+]
+
+# Upload to Google Sheet (Configuration of sheet in gsheets.py). include_more_stats should be true to upload
+uploadGoogle = True
+
+# Debug Mode (More Prints)
+debugmode = False
